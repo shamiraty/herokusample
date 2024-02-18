@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{%block content%}
+
+<div class="container mt-4">
+    <div class="card shadow">
+    <div class="card-body">
+    <!--our contents-->
+    
+    {% load crispy_forms_tags %}
+
+    <body>
+        <h2>User Profile</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.email|as_crispy_field }}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+
+
+
+
+
+ 
+
+    <!--ends content-->
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
